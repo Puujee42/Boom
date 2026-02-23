@@ -71,49 +71,67 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20, scale: 0.95 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ delay: 1.2, duration: 0.8, ease: "easeOut" }}
-                className="absolute right-6 bottom-6 md:right-12 md:bottom-12 z-20 w-64 md:w-72 rounded-3xl overflow-hidden border border-white/10 bg-black/40 backdrop-blur-md shadow-2xl flex flex-col group cursor-pointer hover:border-white/20 transition-colors"
-                whileHover={{ y: -5 }}
+                className="absolute right-6 bottom-6 md:right-12 md:bottom-12 z-20 w-72 md:w-[320px] rounded-[2rem] p-4 bg-gradient-to-b from-[#7A86B6]/60 to-[#5B6382]/60 backdrop-blur-xl border border-white/20 shadow-2xl flex flex-col group cursor-pointer hover:border-white/30 transition-all duration-500"
+                whileHover={{ y: -5, scale: 1.02 }}
             >
-                {/* Map Image container */}
-                <div className="relative h-32 w-full overflow-hidden">
+                {/* Header */}
+                <div className="flex items-center gap-1.5 mb-3 px-1 opacity-70">
+                    <svg className="w-3.5 h-3.5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M22 12A10.06 10.06 0 0 0 12 2 10 10 0 0 0 2 12h20z" />
+                        <path d="M12 12v8a2 2 0 0 0 4 0" />
+                    </svg>
+                    <span className="text-[11px] font-semibold text-white tracking-widest uppercase">Precipitation</span>
+                </div>
+
+                {/* Map Area */}
+                <div className="relative h-[220px] w-full rounded-[1.5rem] overflow-hidden bg-[#454A5F]">
                     <Image
                         src="/map.png"
                         alt="Location Map"
                         fill
-                        className="object-cover opacity-70 grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105 group-hover:opacity-100"
+                        className="object-cover mix-blend-overlay opacity-60 transition-all duration-700 group-hover:scale-105 group-hover:opacity-80 group-hover:mix-blend-normal grayscale group-hover:grayscale-0"
                     />
-                    {/* Gradient overlay for blending */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
 
-                    {/* Location Pin or Badge floating */}
-                    <div className="absolute bottom-3 left-4 flex items-center gap-2">
-                        <div className="relative flex h-2.5 w-2.5">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
+                    {/* Map Content Overlay */}
+                    <div className="absolute inset-0 z-10">
+                        {/* Temperature Pin */}
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+                            <div className="bg-[#8A95C5] border-[2px] border-white rounded-full w-[38px] h-[38px] flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110">
+                                <span className="text-white text-[15px] font-bold tracking-tighter">-16</span>
+                            </div>
+                            <span className="text-white font-medium text-[10px] mt-1.5 drop-shadow-md">My Location</span>
                         </div>
-                        <span className="text-[10px] font-bold text-white tracking-widest uppercase shadow-sm">Near You</span>
-                    </div>
-                </div>
 
-                {/* Info Section */}
-                <div className="p-4 flex items-center justify-between bg-gradient-to-br from-white/5 to-transparent">
-                    <div className="flex items-center gap-3">
-                        <div className="relative h-10 w-10 flex-shrink-0 drop-shadow-md transition-transform duration-500 group-hover:scale-110">
-                            <Image
-                                src="/logo.png"
-                                alt="blüm logo"
-                                fill
-                                className="object-contain"
-                            />
+                        {/* Cities */}
+                        {/* Krasnoyarsk */}
+                        <div className="absolute top-4 left-4 flex items-center gap-[3px] opacity-90">
+                            <div className="w-[3px] h-[3px] rounded-full border-[0.5px] border-white bg-transparent"></div>
+                            <span className="text-[9px] text-white font-semibold drop-shadow-md">Krasnoyarsk</span>
                         </div>
-                        <div className="flex flex-col">
-                            <span className="text-lg font-bold text-white leading-none tracking-tight">Blüm</span>
-                            <span className="text-xs text-neutral-400 font-medium mt-1">Ulaanbaatar, UB</span>
+
+                        {/* Irkutsk */}
+                        <div className="absolute top-[35%] left-[40%] flex items-center gap-[3px] opacity-90">
+                            <div className="w-[3px] h-[3px] rounded-full border-[0.5px] border-white bg-transparent"></div>
+                            <span className="text-[9px] text-white font-semibold drop-shadow-md">Irkutsk</span>
                         </div>
-                    </div>
-                    <div className="flex flex-col items-end">
-                        <span className="text-xl font-light text-white tracking-tighter">HQ</span>
-                        <span className="text-[10px] text-neutral-500 uppercase tracking-wider font-semibold">Location</span>
+
+                        {/* Beijing */}
+                        <div className="absolute bottom-6 right-4 flex items-center gap-[3px] opacity-90">
+                            <div className="w-[3px] h-[3px] rounded-full border-[0.5px] border-white bg-transparent"></div>
+                            <span className="text-[9px] text-white font-semibold drop-shadow-md">Beijing</span>
+                        </div>
+
+                        {/* Datong */}
+                        <div className="absolute bottom-6 right-20 flex items-center gap-[3px] opacity-90">
+                            <span className="text-[9px] text-white font-semibold drop-shadow-md">Datong</span>
+                            <div className="w-[3px] h-[3px] rounded-full border-[0.5px] border-white bg-transparent"></div>
+                        </div>
+
+                        {/* Taiyuan */}
+                        <div className="absolute bottom-2 right-12 flex items-center gap-[3px] opacity-90">
+                            <div className="w-[3px] h-[3px] rounded-full border-[0.5px] border-white bg-transparent"></div>
+                            <span className="text-[9px] text-white font-semibold drop-shadow-md">Taiyuan</span>
+                        </div>
                     </div>
                 </div>
             </motion.div>
