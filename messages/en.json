@@ -1,0 +1,16 @@
+{
+    "Navbar": {
+        "places": "Places",
+        "featured": "Featured",
+        "editorial": "Editorial",
+        "signIn": "Sign In"
+    },
+    "Hero": {
+        "title1": "DISCOVER",
+        "title2": "THE",
+        "title3": "AESTHETIC.",
+        "subtitle": "Curated collection of the finest cafes, restaurants, bars, karaoke, and billiards. Found locally, designed globally.",
+        "explore": "Explore Places",
+        "mission": "Our Mission"
+    }
+}

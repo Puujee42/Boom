@@ -1,0 +1,16 @@
+{
+    "Navbar": {
+        "places": "Orte",
+        "featured": "Empfohlen",
+        "editorial": "Redaktionell",
+        "signIn": "Anmelden"
+    },
+    "Hero": {
+        "title1": "ENTDECKE",
+        "title2": "DIE",
+        "title3": "ÄSTHETIK.",
+        "subtitle": "Kuratierte Sammlung der besten Cafés, Restaurants, Bars, Karaoke und Billard. Lokal gefunden, global gestaltet.",
+        "explore": "Orte erkunden",
+        "mission": "Unsere Mission"
+    }
+}
