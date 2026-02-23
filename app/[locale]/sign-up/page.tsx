@@ -25,7 +25,7 @@ export default function SignUp() {
                     className="w-full max-w-md mx-auto"
                 >
                     <div className="mb-12">
-                        <h1 className="text-3xl font-extrabold tracking-tight mb-2">Join Bloom.</h1>
+                        <h1 className="text-3xl font-extrabold tracking-tight mb-2">Join blüm.</h1>
                         <p className="text-neutral-400 font-light">Become part of the definitive aesthetic directory.</p>
                     </div>
 

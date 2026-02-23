@@ -26,7 +26,7 @@ export default function Navbar() {
                 <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center gap-12">
                         <Link href="/" className="text-2xl font-extrabold tracking-tight text-white">
-                            BLOOM.
+                            Blüm.
                         </Link>
                         <div className="hidden md:flex gap-8">
                             <Link href="#places" className="text-sm font-medium text-neutral-400 hover:text-white transition-colors">Places</Link>
@@ -62,7 +62,7 @@ export default function Navbar() {
                         className="fixed inset-0 z-[100] flex flex-col bg-black/95 backdrop-blur-3xl px-6 py-8"
                     >
                         <div className="flex items-center justify-between mb-12">
-                            <span className="text-2xl font-extrabold tracking-tight text-white">BLOOM.</span>
+                            <span className="text-2xl font-extrabold tracking-tight text-white">Blüm.</span>
                             <button
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="rounded-full bg-neutral-900 p-2 text-white border border-neutral-800"

@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "Bloom | Aesthetic Places",
+    title: "blüm | Aesthetic Places",
     description: "Curated collection of the finest cafes, restaurants, bars, karaoke, and billiards.",
 };
 

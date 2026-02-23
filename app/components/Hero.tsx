@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
+import Image from "next/image";
 
 export default function Hero() {
     const containerVariants: Variants = {
@@ -63,6 +64,58 @@ export default function Hero() {
                         Our Mission
                     </a>
                 </motion.div>
+            </motion.div>
+
+            {/* Weather-like Location Widget */}
+            <motion.div
+                initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ delay: 1.2, duration: 0.8, ease: "easeOut" }}
+                className="absolute right-6 bottom-6 md:right-12 md:bottom-12 z-20 w-64 md:w-72 rounded-3xl overflow-hidden border border-white/10 bg-black/40 backdrop-blur-md shadow-2xl flex flex-col group cursor-pointer hover:border-white/20 transition-colors"
+                whileHover={{ y: -5 }}
+            >
+                {/* Map Image container */}
+                <div className="relative h-32 w-full overflow-hidden">
+                    <Image
+                        src="/map.png"
+                        alt="Location Map"
+                        fill
+                        className="object-cover opacity-70 grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105 group-hover:opacity-100"
+                    />
+                    {/* Gradient overlay for blending */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+
+                    {/* Location Pin or Badge floating */}
+                    <div className="absolute bottom-3 left-4 flex items-center gap-2">
+                        <div className="relative flex h-2.5 w-2.5">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
+                        </div>
+                        <span className="text-[10px] font-bold text-white tracking-widest uppercase shadow-sm">Near You</span>
+                    </div>
+                </div>
+
+                {/* Info Section */}
+                <div className="p-4 flex items-center justify-between bg-gradient-to-br from-white/5 to-transparent">
+                    <div className="flex items-center gap-3">
+                        <div className="relative h-10 w-10 flex-shrink-0 drop-shadow-md transition-transform duration-500 group-hover:scale-110">
+                            <Image
+                                src="/logo.png"
+                                alt="blüm logo"
+                                fill
+                                className="object-contain"
+                            />
+                        </div>
+                        <div className="flex flex-col">
+                            <span className="text-lg font-bold text-white leading-none tracking-tight">Blüm</span>
+                            <span className="text-xs text-neutral-400 font-medium mt-1">Ulaanbaatar, UB</span>
+                        </div>
+                    </div>
+                    <div className="flex flex-col items-end">
+                        <span className="text-xl font-light text-white tracking-tighter">HQ</span>
+                        <span className="text-[10px] text-neutral-500 uppercase tracking-wider font-semibold">Location</span>
+                    </div>
+                </div>
             </motion.div>
         </div>
     );

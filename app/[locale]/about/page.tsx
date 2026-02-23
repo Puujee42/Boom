@@ -53,7 +53,7 @@ export default function About() {
                             >
                                 <h2 className="text-sm font-bold tracking-[0.2em] uppercase text-neutral-500 mb-4">Our Philosophy</h2>
                                 <p className="text-2xl sm:text-3xl font-light leading-snug text-white">
-                                    We believe that spaces shape experiences. Bloom was founded on the principle that aesthetics and atmosphere are not secondary to service—they are the service.
+                                    We believe that spaces shape experiences. blüm was founded on the principle that aesthetics and atmosphere are not secondary to service—they are the service.
                                 </p>
                             </motion.div>
 
@@ -64,7 +64,7 @@ export default function About() {
                                 transition={{ duration: 0.8, delay: 0.4 }}
                             >
                                 <p className="text-lg text-neutral-400 font-light leading-relaxed">
-                                    Our directory is not for everyone. It is a meticulously filtered collection of environments that understand the assignment: monochrome elegance, intentional design, and an unwavering commitment to quality. Whether it's the stark acoustics of a private karaoke suite or the brutalist concrete of a basement espresso bar, every location in Bloom has earned its place.
+                                    Our directory is not for everyone. It is a meticulously filtered collection of environments that understand the assignment: monochrome elegance, intentional design, and an unwavering commitment to quality. Whether it's the stark acoustics of a private karaoke suite or the brutalist concrete of a basement espresso bar, every location in blüm has earned its place.
                                 </p>
                             </motion.div>
                         </div>
